@@ -1,0 +1,17 @@
+BABYKIDS STUDIO - MAYERLI TOBAR · HOJAS REALISTAS
+
+Esta versión cambia el giro rígido del anterior álbum 3D por StPageFlip:
+las esquinas se doblan como papel, las sombras acompañan el movimiento.
+
+1) Extraer el ZIP y abrir la carpeta BabyKids-Mayerli-3D en Visual Studio Code.
+2) Abrir index.html con Live Server (clic derecho -> Open with Live Server).
+3) Abrir la portada pulsando Siguiente; usar los botones o arrastrar la esquina.
+4) Las fotos están en assets/img y la música en assets/audio.
+5) Para probar desde el celular, conectar al mismo Wi-Fi y abrir desde la IP de la computadora.
+
+IMPORTANTE
+- Esta versión está separada de la anterior: haz pruebas antes de subirla a GitHub.
+- Requiere Internet para cargar StPageFlip y fuentes web.
+- Fotos a tamaño de página, object-fit:contain: las verticales muestran bandas laterales.
+- La portada usa la misma proporción horizontal de la imagen original.
+- Las fotografías de niños pueden tener datos personales: no publicar sin permiso de sus representantes.
