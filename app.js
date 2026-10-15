@@ -4,7 +4,7 @@
 (() => {
   'use strict';
   const ALBUM = {
-    nombre: 'Mayerli Tobar',
+    nombre: 'Valentina',
     portada: 'assets/img/portada.webp',
     fotos: Array.from({length: 10}, (_, i) =>
       `assets/img/foto-${String(i + 1).padStart(2, '0')}.webp`)
@@ -56,16 +56,16 @@
     if (type !== 'photo') page.dataset.density = 'hard';
     if (type === 'cover') {
       page.innerHTML = `<div class="cover-art">
-        <img class="cover-image" src="${image}" alt="Mayerli, fotografía completa de portada" draggable="false" fetchpriority="high">
+        <img class="cover-image" src="${image}" alt="Valentina, fotografía completa de portada" draggable="false" fetchpriority="high">
         <span class="cover-outline" aria-hidden="true"></span>
-        <div class="cover-banner"><span>BABYKIDS STUDIO</span><strong>MAYERLI TOBAR</strong><small>ÁLBUM FOTOGRÁFICO DIGITAL</small></div>
+        <div class="cover-banner"><span>BABYKIDS STUDIO</span><strong>Valentina</strong><small>ÁLBUM FOTOGRÁFICO DIGITAL</small></div>
       </div>`;
     } else if (type === 'back') {
-      page.innerHTML = `<div class="back-art"><span class="back-mark">B✧K</span><strong>Mayerli Tobar</strong><span>UNA CREACIÓN DE BABYKIDS STUDIO</span></div>`;
+      page.innerHTML = `<div class="back-art"><span class="back-mark">B✧K</span><strong>Valentina Tobar</strong><span>UNA CREACIÓN DE BABYKIDS STUDIO</span></div>`;
     } else {
       page.innerHTML = `<div class="photo-art">
         <img class="photo-blur" src="${image}" alt="" aria-hidden="true" loading="lazy">
-        <img class="photo-main" src="${image}" alt="Fotografía ${i} de Mayerli Tobar" loading="eager" draggable="false">
+        <img class="photo-main" src="${image}" alt="Fotografía ${i} de Valentina Tobar" loading="eager" draggable="false">
         <span class="photo-outline" aria-hidden="true"></span>
       </div>`;
     }
@@ -211,7 +211,7 @@
   requestAnimationFrame(centrarLibroCerrado);
   
 /* =========================================
-   BABYKIDS STUDIO - MAYERLI 3D
+   BABYKIDS STUDIO - Valentina 3D
    CENTRADO AUTOMATICO EN PANTALLA COMPLETA
 ========================================= */
 
