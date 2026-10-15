@@ -93,4 +93,98 @@
     <footer class="footer"><span>UNA CREACIÓN DE <strong>BABYKIDS STUDIO</strong></span><span>HECHO PARA RECORDAR <span aria-hidden="true">✧</span></span></footer>
   </div>
 </body>
+
+<!-- MODO AMPLIADO PARA IPHONE -->
+<style>
+body.iphone-ampliado {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body.iphone-ampliado .app {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Ocultar elementos decorativos */
+body.iphone-ampliado .topbar,
+body.iphone-ampliado .intro,
+body.iphone-ampliado .footer,
+body.iphone-ampliado .showcase-tip {
+  display: none !important;
+}
+
+/* Centrar el libro */
+body.iphone-ampliado .content {
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+  padding: 5px 8px env(safe-area-inset-bottom);
+}
+
+body.iphone-ampliado .showcase {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Libro grande en vertical */
+body.iphone-ampliado .book-frame {
+  width: min(96vw, calc((100dvh - 120px)*1.4)) !important;
+  height: min(calc(96vw/1.4), calc(100dvh - 120px)) !important;
+  min-height: 0 !important;
+}
+
+/* Controles visibles */
+body.iphone-ampliado .toolbar {
+  margin: 4px auto;
+  padding: 2px 0;
+}
+
+body.iphone-ampliado .secondary-controls {
+  padding: 3px 0 7px;
+}
+
+/* Libro horizontal al girar el iPhone */
+@media (orientation: landscape) {
+  body.iphone-ampliado .book-frame {
+    width: min(96vw, calc((100dvh - 105px)*2.8)) !important;
+    height: min(calc(96vw/2.8), calc(100dvh - 105px)) !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const esIPhone = /iPhone|iPod/i.test(navigator.userAgent);
+  const boton = document.getElementById('fullscreen');
+
+  if (!esIPhone || !boton) return;
+
+  boton.addEventListener('click', (evento) => {
+    evento.preventDefault();
+    evento.stopImmediatePropagation();
+
+    const ampliado =
+      document.body.classList.toggle('iphone-ampliado');
+
+    boton.setAttribute('aria-pressed', String(ampliado));
+
+    boton.textContent = ampliado
+      ? '⤢ Salir de vista ampliada'
+      : '⛶ Pantalla completa';
+
+    window.scrollTo(0, 0);
+
+    requestAnimationFrame(() => {
+      window.dispatchEvent(new Event('resize'));
+    });
+  }, true);
+});
+</script>
+
 </html>
