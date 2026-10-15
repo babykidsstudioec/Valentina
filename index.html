@@ -21,6 +21,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- SOLO CAMBIOS DE PORTADA Y CONTRAPORTADA.
+       No se modifica el código de hojas, controles, fotos interiores ni música. -->
+  <style>
+    /* Portada: fotografía de Valentina, completa y sin textos duplicados */
+    .book-cover .cover-art {
+      background: #f3e5da url("assets/img/portada-valentina.jpg") center center / contain no-repeat !important;
+    }
+    .book-cover .cover-image,
+    .book-cover .cover-banner,
+    .book-cover .cover-outline {
+      display: none !important;
+    }
+
+    /* Contraportada: imagen de BabyKids al cerrar el fotolibro */
+    .book-back .back-art {
+      background: #f3e5da url("assets/img/contraportada-babykids.jpg") center center / contain no-repeat !important;
+    }
+    .book-back .back-art > *,
+    .book-back .back-art::after {
+      display: none !important;
+    }
+  </style>
   <!-- El mismo motor de hojas flexibles que usamos en el álbum anterior -->
   <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js" defer></script>
   <script src="app.js" defer></script>
@@ -29,7 +51,6 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <span class="brand-symbol" aria-hidden="true">B<span>✦</span>K</span>
         <span class="brand-copy"><strong>BABYKIDS STUDIO</strong><small>ÁLBUM FOTOGRÁFICO DIGITAL</small></span>
       </div>
       <span class="edition"><span class="edition-dot"></span> EDICIÓN PREMIUM <span class="edition-line"></span> RECUERDOS PARA SIEMPRE</span>
